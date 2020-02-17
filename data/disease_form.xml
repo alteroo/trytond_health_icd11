@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tree string="HealthIcd11">
+	<field name="name"/>
+	<field name="code"/>
+	<field name="category"/>
+</tree>
