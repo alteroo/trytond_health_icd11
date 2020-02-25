@@ -19,7 +19,11 @@ class Pathology(baseHealth.Pathology):
 				has_classifier = True
 		if not has_classifier:
 			#TODO: Use the tryond.conf file to store the default ICD classifier
-			domain.append(['classifier', '=', 'ICD10'])			
+			domain.append([
+				'OR',
+				('classifier', '=', 'ICD10'),
+				('classifier', '=', None)
+			])			
 		(table, expression) = \
 			super(baseHealth.Pathology, cls).search_domain(
 				domain, active_test)
