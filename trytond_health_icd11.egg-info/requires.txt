@@ -1,2 +1,0 @@
-trytond<3.5,>=3.4
-trytond_health>=2.8.1

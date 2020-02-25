@@ -25,7 +25,7 @@ class Pathology(baseHealth.Pathology):
 				domain, active_test)
 		return table, expression
 
-	@staticmethod
+	@classmethod
 	def default_classifier():
 		return 'ICD10'
 
@@ -36,3 +36,7 @@ class PathologyCategory(baseHealth.PathologyCategory):
     @classmethod
     def __setup__(cls):
         super(PathologyCategory, cls).__setup__()
+
+#TODO: Remove Deprecations
+HealthIcd11 = Pathology
+Category = PathologyCategory
