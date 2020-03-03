@@ -15,7 +15,7 @@ class Pathology(baseHealth.Pathology):
 	def search_domain(cls, domain, active_test=True):
 		has_classifier = False
 		for d in domain:
-			if d[0].lower() == 'classifier' and d[1] == '=':
+			if d[0] == 'classifier' and d[1] == '=':
 				has_classifier = True
 		if not has_classifier:
 			#TODO: Use the tryond.conf file to store the default ICD classifier
